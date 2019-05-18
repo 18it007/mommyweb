@@ -1,0 +1,58 @@
+<style type="text/css">
+	.navbar-right #profile{display:none;}
+	body{background-color:#FFB6C1;}
+	#contact{display:none;}
+	.nav2{display:none;}
+	.card-dangnhap{
+		border-radius: 1rem;
+	}
+	.btn-facebook {
+	    color: #fff;
+	    background-color: #4677ab;
+	    border-color: #4677ab;
+	}
+	.btn-facebook:hover{
+		color: #fff;
+	     background-color: #366392;
+	    border-color: #366392;
+	}
+	.signin a{color:#E46A80;}
+	.signin:hover a{
+		color:white;
+		text-decoration: none;
+		font-weight:600;
+	}
+</style>
+<div class="container" style="padding-top:50px;">
+	<div id="dangnhap" class="animate form">
+		<div class="row">
+	<div class="col-lg-5 col-md-7 col-sm-9 mx-auto">
+	<div class="card card-dangnhap my-4  shadow-sm">
+		<div class="card-body">
+			<h4 class="card-title text-center mt-2">ĐĂNG NHẬP</h4>
+			<form class="form-signin p-1">
+				<div class="form-label-group pb-3">
+					<label for="inputEmail">Địa chỉ Email</label>
+					<input type="email" id="inputEmail" class="form-control" style="border-radius: 1rem !important;" required autofocus>			
+				</div>
+
+				<div class="form-label-group pb-3">
+					<label for="inputPassword">Mật khẩu</label>
+					<input type="password" id="inputPassword" class="form-control" style="border-radius: 1rem !important;" required>		
+				</div>
+
+				<div class="custom-control custom-checkbox mb-3">
+					<input type="checkbox" class="custom-control-input" id="customCheck1">
+					<label class="custom-control-label" for="customCheck1">Nhớ mật khẩu</label>
+				</div>
+				<button class="btn btn-pink btn-lg btn-block text-uppercase btn-outline-danger mb-3 signin" type="submit" onclick="hidden()" style="cursor:default;"><a href="/gigs/profile">Đăng nhập</a></button>
+				<small class="text-center">Chưa có tài khoản? </small><a class="mt-2 small text-center link-dangki" href="/gigs/signup" style="color:blue;">Đăng kí</a>
+				<hr class="my-4">
+				
+			</form>
+			<button class="btn btn-lg btn-google btn-block text-uppercase btn-danger" type="submit" style="border-radius: 1.5rem !important;"><i class="fab fa-google mr-2"></i> <small>đăng nhập với google</small></button>
+				<button class="btn btn-lg btn-facebook btn-block text-uppercase btn-primary" type="submit" style="border-radius: 1.5rem !important;"><i class="fab fa-facebook-f mr-2"></i><small>đăng nhập với facebook</small></button>
+		</div>
+	</div></div>
+	</div></div>
+</div>

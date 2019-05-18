@@ -1,0 +1,40 @@
+<style type="text/css">
+
+  .navbar-right #in, #up{display:none;}
+body{
+  background: linear-gradient(to bottom right, #8e9eab 0%, #eef2f3 100%);background-size: cover;background-repeat: no-repeat;height: 100%;
+}
+</style>
+<section id="add" class="autoChange">
+    <div class="form-wrap">
+      <h1>Thêm bài viết mới</h1>
+      <p>Bài viết của bạn sẽ được chia sẻ đến tất cả mọi người</p>
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form action="/gigs/add" method="POST">
+        <div class="input-group">
+          <label for="title">Tên bài viết</label>
+          <input type="text" name="title" id="title" class="input-box" placeholder="Bài viết của bạn nói về điều gì?"
+            maxlength="100" value={{title}}>
+        </div>
+        <div class="input-group">
+          <label for="technologies">Chủ đề</label>
+          <input type="text" name="technologies" id="technologies" class="input-box" placeholder="Chuẩn bị mang thai, Chăm con, ..."
+          maxlength="100" value={{technologies}}>
+        </div>
+        <div class="input-group">
+          <label for="description">Nội dung</label>
+          <textarea name="description" id="description" class="input-box" placeholder="Chi tiết bài viết"
+            rows="10">{{description}}</textarea>
+        </div>
+        <div class="input-group">
+          <label for="budget">Tên của bạn</label>
+          <input type="text" name="contact_email" id="contactemail" class="input-box" placeholder="Để lại tên của bạn" value={{contact_email}}>
+        </div>
+        <input type="submit" value="Tạo bài viết" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>

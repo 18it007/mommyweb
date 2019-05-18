@@ -1,0 +1,26 @@
+<style type="text/css">
+
+  .navbar-right #in, #up{display:none;}
+body{
+  background: linear-gradient(to bottom right, #8e9eab 0%, #eef2f3 100%);background-size: cover;background-repeat: no-repeat;height: 100%;
+}
+</style>
+<section id="gigs" class="autoChange">
+  <div style="height:48px;"></div>
+    {{#each gigs}}
+      <div class="gig">
+      <h3>{{title}}</h3>
+      <p id="text" style="height:50px;overflow:hidden;">{{description}}</p>
+      <ul>
+        <li>Người đăng:<i> {{contact_email}}</i></li>
+        <button id="viewmore" onclick="myFunction()" style="margin: 0 auto;">Xem thêm</button>
+      </ul>
+      <div class="tech">
+        <strong>Chủ đề: <span>{{technologies}}</span></strong>
+      </div>
+    </div>
+    {{else}}
+      <h4 align="center">Không tìm thấy bài viết</h4>
+    {{/each}}
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+  </section>
